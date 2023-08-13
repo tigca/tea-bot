@@ -14,36 +14,6 @@ with open('config.txt', 'r') as file:
 # login
 bot = telebot.TeleBot(bot_token)
 
-user_repositories = {}
-user_states = {}
-
-
-class States:
-    default = 0
-    adding_repo = 1
-
-
-def add_repository(chat_id, repository_url):
-    repositories = user_repositories.get(chat_id, [])
-    if len(repositories) < 5:
-        repositories.append(repository_url)
-        user_repositories[chat_id] = repositories
-        return True
-    else:
-        return False
-
-
-def set_state(user_id, state):
-    user_states[user_id] = state
-
-
-def get_state(user_id):
-    if user_id in user_states:
-        return user_states[user_id]
-    else:
-        return States.default
-
-
 @bot.message_handler(commands=['start'])
 def start(message):
     keyboard = InlineKeyboardMarkup()
