@@ -23,8 +23,8 @@ def start(message):
     keyboard.row(button1, button2)
     keyboard.row(button3)
     welcome_message = '<b>👋 Добро пожаловать в меню\n\n' \
-                      '🐯 А тут, <a href="https://t.me/TriggerEarth">наш канал</a>\n' \
-                      '🧑‍💻 И вот тут, <a href="https://t.me/trigger_chat">чат тех. поддержки</a>\n\n' \
+                      '🐯 А тут, <a href="https://t.me/Uteagram">наш канал</a>\n' \
+                      '🧑‍💻 И вот тут, <a href="https://t.me/UBteagram">чат</a>\n\n' \
                       '💚 Спасибо <a href="http://VIP_IPru_tw.t.me">VIP*</a>\n\n' \
                       '🤴 Версия бота: 0.1 [Beta] ⚡</b>'
     bot.send_message(message.chat.id, welcome_message, reply_markup=keyboard, parse_mode='HTML',
