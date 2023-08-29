@@ -54,6 +54,6 @@ def search_word(message):
                 bot.send_message(message.chat.id, result_text)
 
 
-# start-
+# start
 if __name__ == "__main__":
     bot.polling()
